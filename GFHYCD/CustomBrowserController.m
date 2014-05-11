@@ -45,7 +45,7 @@ static NSString * const kBroswerGoForward = @"前进";
     CGFloat barTopY = 0;//self.customNaviBar.bottom - 2;
     CGRect progressBarFrame = CGRectMake(0, barTopY, self.view.width, 2);
     self.progressView = [[NJKWebViewProgressView alloc] initWithFrame:progressBarFrame];
-    _progressView.progressBarView.backgroundColor = RGBCOLOR(255,255,255);
+    _progressView.progressBarView.backgroundColor = [UIColor whiteColor];
     self.progressProxy = [NJKWebViewProgress new];
     self.browser.delegate = _progressProxy;
     _progressProxy.webViewProxyDelegate = self;
@@ -161,16 +161,6 @@ static NSString * const kBroswerGoForward = @"前进";
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-}
-
-- (void)dealloc{
-
-    [_browser release];
-    [_progressView release];
-    [_request release];
-    [_progressProxy release];
-    _progressProxy = nil;
-    [super dealloc];
 }
 
 @end

@@ -26,7 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.title = @"精品应用";
 }
 
 - (void)didReceiveMemoryWarning

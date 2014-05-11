@@ -7,21 +7,37 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ProgressViewController.h"
+#import "DBManager.h"
+#import "UMSocial.h"
 @implementation AppDelegate
 
-- (void)dealloc
+#pragma mark - 创建个人收藏的数据库及在数据库中的表
+- (void) createTable
 {
-    [_window release];
-    [super dealloc];
+    NSString *filePath = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@",kFileName];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    BOOL isExists = [fileManager fileExistsAtPath:filePath];
+    if (!isExists) {//第一次数据库文件不存在,则创建数据库的同时创建两个表 
+        [[DBManager sharedInstance]createTable:ShouCangTable];
+        [[DBManager sharedInstance]createTable:LatestSearchTable];
+    }
 }
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
+    //分享模块做的设置操作
+    [UMSocialData setAppKey:@"5211818556240bc9ee01db2f"];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage imageNamed:@"calligrapher"] stretchableImageWithLeftCapWidth:4 topCapHeight:8]
+                                       forBarMetrics:UIBarMetricsDefault];
+    
+    ProgressViewController *progressCtr = [[ProgressViewController alloc]init];
+    self.window.rootViewController = progressCtr;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    [self createTable];
     return YES;
 }
 

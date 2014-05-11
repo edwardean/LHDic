@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface SharedViewController : BaseViewController
+- (IBAction)sendMessage:(id)sender;
+@property (retain, nonatomic) IBOutlet UILabel *contentLabel;
 
 @end

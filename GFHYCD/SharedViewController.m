@@ -7,7 +7,7 @@
 //
 
 #import "SharedViewController.h"
-
+#import "UMSocial.h"
 @interface SharedViewController ()
 
 @end
@@ -32,7 +32,13 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+}
+
+- (IBAction)sendMessage:(id)sender {
+    NSString *str = _contentLabel.text;
+    UIImage *image = [UIImage imageNamed:@"zidian@2x.png"];
+    [UMSocialSnsService presentSnsIconSheetView:self appKey:nil shareText:str shareImage:image shareToSnsNames:@[UMShareToSina,UMShareToTencent,UMShareToQzone,UMShareToQQ,UMShareToRenren,UMShareToDouban,UMShareToEmail,UMShareToSms] delegate:nil];
 }
 
 @end

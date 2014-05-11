@@ -10,6 +10,7 @@
 
 @interface AboutViewController ()
 
+@property (nonatomic, strong) UIImageView *logoView;
 @end
 
 @implementation AboutViewController
@@ -26,7 +27,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.title = @"关于我们";
+    
+    self.logoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo3"]];
+    [_logoView sizeToFit];
+    [self.view addSubview:_logoView];
+    
+    _logoView.center = self.view.center;
 }
 
 - (void)didReceiveMemoryWarning

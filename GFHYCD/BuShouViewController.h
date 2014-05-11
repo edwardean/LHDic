@@ -9,5 +9,6 @@
 #import "SearchCharacterViewController.h"
 
 @interface BuShouViewController : SearchCharacterViewController
-
+@property (nonatomic,assign) int indentify;//传入的表示符通过它搜索相关项
+@property (nonatomic,retain) NSMutableArray *buShouId;
 @end

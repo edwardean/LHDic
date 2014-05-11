@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (GetFirstController)
-
+- (UIViewController *)getFirstController;
 @end

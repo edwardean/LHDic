@@ -10,4 +10,9 @@
 
 @interface DetailCharacterModel : NSObject
 
+@property (nonatomic,copy) NSString *hanYu;//基本信息
+@property (nonatomic,copy) NSString *base;//汉语词典
+@property (nonatomic,copy) NSString *english;//英文翻译
+@property (nonatomic,copy) NSString *idiom;//组词成语
+
 @end

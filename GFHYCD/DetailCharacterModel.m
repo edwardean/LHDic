@@ -10,4 +10,9 @@
 
 @implementation DetailCharacterModel
 
+- (void) dealloc
+{
+    
+}
+
 @end

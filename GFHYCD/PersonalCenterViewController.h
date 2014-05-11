@@ -8,6 +8,14 @@
 
 #import "BaseViewController.h"
 
-@interface PersonalCenterViewController : BaseViewController
+@interface PersonalCenterViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    UITableView *_tableView;
+    NSArray *_myDataArray;
+}
 
 @end
+
+
+
+
