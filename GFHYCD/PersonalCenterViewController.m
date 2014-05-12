@@ -9,8 +9,6 @@
 #import "PersonalCenterViewController.h"
 #import "CollectionViewController.h"
 #import "BoutiqueAppViewController.h"
-#import "AppGradeViewController.h"
-#import "AboutViewController.h"
 #import "CustomBrowserController.h"
 #import "SharedViewController.h"
 #import "DBManager.h"
@@ -38,7 +36,7 @@
 #pragma mark - 初始化子视图
 - (void) initSubView
 {
-    _myDataArray = [NSArray arrayWithObjects:@"我的收藏",@"分享",@"意见反馈",@"在线词典",@"应用打分",@"关于我们", nil];
+    _myDataArray = [NSArray arrayWithObjects:@"我的收藏",@"分享",@"意见反馈",@"在线翻译",@"关于我们", nil];
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 20 -44) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -83,37 +81,47 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-        CollectionViewController *collectionCtr = [[CollectionViewController alloc]init];
-        collectionCtr.title = @"我的收藏";
-        [self.navigationController pushViewController:collectionCtr animated:YES];
-    } else if (indexPath.row == 1) {
-        SharedViewController *sharedStr = [[SharedViewController alloc]init];
-        sharedStr.title = @"分享";
-        [self.navigationController pushViewController:sharedStr animated:YES];
+    switch (indexPath.row) {
+        case 0:
+        {
+            CollectionViewController *collectionCtr = [[CollectionViewController alloc]init];
+            collectionCtr.title = @"我的收藏";
+            [self.navigationController pushViewController:collectionCtr animated:YES];
 
-    } else if (indexPath.row == 2) {
-        
-        [[UIApplication sharedApplication]openURL:[NSURL   URLWithString:@"mailto://499785258@qq.com"]];
-        
-    } else if (indexPath.row == 3) {
-//        BoutiqueAppViewController *boutiqueAppController = [[BoutiqueAppViewController alloc] initWithNibName:nil bundle:nil];
-//        [self.navigationController pushViewController:boutiqueAppController animated:YES];
-        
-        CustomBrowserController *browserController = [[CustomBrowserController alloc] initWithNibName:nil bundle:nil];
-        browserController.request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://fanyi.baidu.com/#auto/zh/"]];
-        [self.navigationController pushViewController:browserController animated:YES];
-    } else if (indexPath.row == 4) {
-        AppGradeViewController *appGradeController = [[AppGradeViewController alloc] initWithNibName:nil bundle:nil];
-        [self.navigationController pushViewController:appGradeController animated:YES];
-    } else if (indexPath.row == 5) {
-//        AboutViewController *aboutController = [[AboutViewController alloc] initWithNibName:nil bundle:nil];
-//        [self.navigationController pushViewController:aboutController animated:YES];
-        CustomBrowserController *browserController = [[CustomBrowserController alloc] initWithNibName:nil bundle:nil];
-        browserController.request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.nyist.net"]];
-        [self.navigationController pushViewController:browserController animated:YES];
+        }
+            break;
+        case 1:
+        {
+            SharedViewController *sharedStr = [[SharedViewController alloc]init];
+            sharedStr.title = @"分享";
+            [self.navigationController pushViewController:sharedStr animated:YES];
+        }
+            break;
+        case 2:
+        {
+            
+            [[UIApplication sharedApplication]openURL:[NSURL   URLWithString:@"mailto://499785258@qq.com"]];
+            
+
+        }
+            break;
+        case 3:
+        {
+            CustomBrowserController *browserController = [[CustomBrowserController alloc] initWithNibName:nil bundle:nil];
+            browserController.request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://fanyi.baidu.com/#auto/zh/"]];
+            [self.navigationController pushViewController:browserController animated:YES];
+        }
+            break;
+        case 4:
+        {
+            CustomBrowserController *browserController = [[CustomBrowserController alloc] initWithNibName:nil bundle:nil];
+            browserController.request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.nyist.net"]];
+            [self.navigationController pushViewController:browserController animated:YES];
+        }
+            break;
+        default:
+            break;
     }
-    
 }
 
 - (void)didReceiveMemoryWarning

@@ -155,8 +155,6 @@
 		CA8752131918DAE100E5B8E7 /* YLProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8752111918DAE100E5B8E7 /* YLProgressBar.m */; };
 		CA8752161918DE0900E5B8E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA8752151918DE0900E5B8E7 /* Images.xcassets */; };
 		CA87521C1918E12800E5B8E7 /* BoutiqueAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA87521B1918E12800E5B8E7 /* BoutiqueAppViewController.m */; };
-		CA87521F1918E15300E5B8E7 /* AppGradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA87521E1918E15300E5B8E7 /* AppGradeViewController.m */; };
-		CA8752281918E34800E5B8E7 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8752271918E34800E5B8E7 /* AboutViewController.m */; };
 		CA87522A1918E4D500E5B8E7 /* logo3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA8752291918E4D500E5B8E7 /* logo3@2x.png */; };
 		CACACF75191FD3BC005FB11F /* CustomBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = CACACF74191FD3BC005FB11F /* CustomBrowserController.m */; };
 		CACACF7A191FD40F005FB11F /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = CACACF77191FD40F005FB11F /* NJKWebViewProgress.m */; };
@@ -357,10 +355,6 @@
 		CA8752151918DE0900E5B8E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CA87521A1918E12800E5B8E7 /* BoutiqueAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoutiqueAppViewController.h; sourceTree = "<group>"; };
 		CA87521B1918E12800E5B8E7 /* BoutiqueAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoutiqueAppViewController.m; sourceTree = "<group>"; };
-		CA87521D1918E15300E5B8E7 /* AppGradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGradeViewController.h; sourceTree = "<group>"; };
-		CA87521E1918E15300E5B8E7 /* AppGradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGradeViewController.m; sourceTree = "<group>"; };
-		CA8752261918E34800E5B8E7 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
-		CA8752271918E34800E5B8E7 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		CA8752291918E4D500E5B8E7 /* logo3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo3@2x.png"; sourceTree = "<group>"; };
 		CACACF73191FD3BC005FB11F /* CustomBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBrowserController.h; sourceTree = "<group>"; };
 		CACACF74191FD3BC005FB11F /* CustomBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBrowserController.m; sourceTree = "<group>"; };
@@ -427,8 +421,6 @@
 			children = (
 				0F269AE617F0788E0022699D /* PersonalCenterViewController.h */,
 				0F269AE717F0788E0022699D /* PersonalCenterViewController.m */,
-				CA8752251918E33A00E5B8E7 /* 关于我们 */,
-				CA8752241918E24700E5B8E7 /* 应用打分 */,
 				CA8752231918E23100E5B8E7 /* 精品应用 */,
 				CA8752211918E20900E5B8E7 /* 分享 */,
 				CA8752201918E1F500E5B8E7 /* 我的收藏 */,
@@ -794,24 +786,6 @@
 			name = "精品应用";
 			sourceTree = "<group>";
 		};
-		CA8752241918E24700E5B8E7 /* 应用打分 */ = {
-			isa = PBXGroup;
-			children = (
-				CA87521D1918E15300E5B8E7 /* AppGradeViewController.h */,
-				CA87521E1918E15300E5B8E7 /* AppGradeViewController.m */,
-			);
-			name = "应用打分";
-			sourceTree = "<group>";
-		};
-		CA8752251918E33A00E5B8E7 /* 关于我们 */ = {
-			isa = PBXGroup;
-			children = (
-				CA8752261918E34800E5B8E7 /* AboutViewController.h */,
-				CA8752271918E34800E5B8E7 /* AboutViewController.m */,
-			);
-			name = "关于我们";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -986,7 +960,6 @@
 				CA8752131918DAE100E5B8E7 /* YLProgressBar.m in Sources */,
 				0FE3881A17E6EF3D00479D13 /* main.m in Sources */,
 				0FE3881E17E6EF3D00479D13 /* AppDelegate.m in Sources */,
-				CA87521F1918E15300E5B8E7 /* AppGradeViewController.m in Sources */,
 				0FE3882D17E6EF8D00479D13 /* BaseViewController.m in Sources */,
 				0FE3883317E6F01600479D13 /* DictionaryTableView.m in Sources */,
 				0FE3883617E6F14400479D13 /* RootViewController.m in Sources */,
@@ -1009,7 +982,6 @@
 				CACACF7B191FD40F005FB11F /* NJKWebViewProgressView.m in Sources */,
 				0F269AE817F0788E0022699D /* PersonalCenterViewController.m in Sources */,
 				CA8752121918DAE100E5B8E7 /* YLBackgroundView.m in Sources */,
-				CA8752281918E34800E5B8E7 /* AboutViewController.m in Sources */,
 				0F3794F817F1778100AB7FAB /* CollectionViewController.m in Sources */,
 				0F29E72317F3B6890038AD91 /* MBProgressHUD.m in Sources */,
 				0FF3BC2C180E343E000A4E72 /* SharedViewController.m in Sources */,

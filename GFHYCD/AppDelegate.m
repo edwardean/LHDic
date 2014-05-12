@@ -33,6 +33,8 @@
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage imageNamed:@"calligrapher"] stretchableImageWithLeftCapWidth:4 topCapHeight:8]
                                        forBarMetrics:UIBarMetricsDefault];
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     ProgressViewController *progressCtr = [[ProgressViewController alloc]init];
     self.window.rootViewController = progressCtr;
     self.window.backgroundColor = [UIColor whiteColor];
